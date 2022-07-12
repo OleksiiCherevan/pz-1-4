@@ -5,7 +5,6 @@
 }
 
 body {
-    
     background: #303030;
 }
 .header {
@@ -20,9 +19,104 @@ body {
 }
 
 .menu {
+    cursor: pointer;
     margin-right: 32px;
 }
 
+.menu-mobile {
+    visibility: hidden;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+}
+
+.menu-mobile_open {
+    visibility: visible;
+}
+
+.menu-mobile__content {
+    height: 100%;
+    height: auto;
+    width: 300px;
+    background-color: white;
+}
+
+.menu-mobile__close {
+    cursor: pointer;
+    background-color: #303030f0;
+    width: calc(100vw - 300px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu-mobile__top {
+    background: url("./../img/images/pattern.svg");
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.menu-mobile__image {
+    width: 80px;
+    height: 80px;
+}
+
+.menu-mobile__name {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.mobile-buttons {
+    margin-top: 36px;
+    margin-left: 20px;
+}
+
+.mobile-button {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 24px;
+}
+.mobile-button:last-child {
+    margin-bottom: 0px;
+}
+
+.mobile-button__image {
+    height: 24px;
+    width: 24px;
+}
+.mobile-button__text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.mobile-close {
+    box-sizing: content-box;
+    width: 24px;
+    height: 24px;
+    padding: 40px 16px;
+    /* padding: 4px; */
+}
 .header__title {
     font-family: "Roboto";
     font-style: normal;
@@ -39,7 +133,7 @@ body {
     padding-bottom: 60px;
     padding: 8px;
     display: flex;
-    gap: 18px 30px ;
+    gap: 18px 30px;
     flex-wrap: wrap;
     /* flex-direction: column; */
     align-items: center;
@@ -71,7 +165,7 @@ body {
     height: 100%;
     width: 100%;
 
-    object-fit: cover;    
+    object-fit: cover;
 }
 
 .card-news__info {
